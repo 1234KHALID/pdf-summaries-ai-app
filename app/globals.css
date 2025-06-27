@@ -3,6 +3,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@layer utilities {
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
 @theme inline {
 
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif,
@@ -240,6 +246,23 @@
 
  button {
   @apply hover:cursor-pointer bg-rose-600 hover:bg-rose-700
+ }
+
+ @keyframes gradient-x {
+   0%,
+   100% {
+     background-size: 200% 100%;
+     background-position: right center;
+   }
+
+   50% {
+     background-size: 200% 100%;
+     background-position: right center;
+   }
+ }
+
+ .animate-gradient-x {
+   animation: gradient-x 3s ease infinite;
  }
 }
 
